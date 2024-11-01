@@ -56,7 +56,7 @@ export default function Room() {
   };   
 
   useEffect(() => {
-    const socket = io('http://localhost:3000');
+    const socket = io('https://video-call-56h0.onrender.com/');
     socketRef.current = socket;
 
     // Get local stream
