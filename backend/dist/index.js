@@ -11,11 +11,15 @@ const app = (0, express_1.default)();
 const httpServer = (0, http_1.createServer)(app);
 const io = new socket_io_1.Server(httpServer, {
     cors: {
-        origin: "https://video-call-omega-woad.vercel.app/",
+        origin: "*",
         methods: ["GET", "POST"]
     }
 });
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: "*",
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(express_1.default.json());
 const rooms = new Map();
 io.on('connection', (socket) => {
