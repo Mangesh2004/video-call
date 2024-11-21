@@ -258,7 +258,7 @@ export default function Room() {
       {/* Mobile Menu Button */}
       <motion.button
         whileTap={{ scale: 0.95 }}
-        className="md:hidden fixed top-4 left-4 z-50 p-2 bg-gray-800/80 backdrop-blur-sm rounded-full"
+        className=" fixed top-4 left-4 z-50 p-2 bg-gray-800/80 backdrop-blur-sm rounded-full"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <Menu className="w-6 h-6 text-white" />
